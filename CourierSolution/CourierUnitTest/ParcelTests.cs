@@ -1,4 +1,6 @@
 using CourierSolution.Factory;
+using CourierSolution.Interfaces;
+using CourierSolution.Models;
 using Moq;
 using NUnit.Framework;
 
@@ -14,15 +16,11 @@ namespace CourierUnitTest
 
 
         [Test]
-        public void SpeedyDeliveryStatusChanges()
+        public void IsParcelLimitStatus()
         {
-            Mock<SmallParcel> smallParcel = new Mock<SmallParcel>();
+            IParcel smallParcel = ParcelFactoryHelper.CreateParcel(2,1,1,51);
             
-            Assert.IsFalse(smallParcel.Object.IsSpeedy);
-            
-            smallParcel.Object.AddSpeedyDelivery();
-            
-            Assert.IsTrue(smallParcel.Object.IsSpeedy);
+            Assert.IsTrue(smallParcel.IsParcelLimit);
         }
         
     }

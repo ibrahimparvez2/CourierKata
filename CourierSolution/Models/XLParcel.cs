@@ -1,4 +1,4 @@
-namespace CourierSolution.Factory
+namespace CourierSolution.Models
 {
     public class XLParcel : BaseParcel
     {

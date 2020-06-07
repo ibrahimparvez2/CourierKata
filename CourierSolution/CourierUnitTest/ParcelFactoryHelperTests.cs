@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 using CourierSolution.Factory;
+using CourierSolution.Models;
 using NUnit.Framework;
 
 namespace CourierUnitTest
