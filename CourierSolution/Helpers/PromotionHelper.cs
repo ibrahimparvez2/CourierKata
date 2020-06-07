@@ -3,7 +3,7 @@ using System.Linq;
 using CourierSolution.Interfaces;
 using CourierSolution.Models;
 
-namespace CourierSolution
+namespace CourierSolution.Helpers
 {
     public static class PromotionHelper
     {

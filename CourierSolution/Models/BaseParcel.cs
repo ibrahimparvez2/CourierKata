@@ -1,7 +1,6 @@
-using CourierSolution.Factory;
 using CourierSolution.Interfaces;
 
-namespace CourierSolution
+namespace CourierSolution.Models
 {
     public class BaseParcel : IParcel
     {

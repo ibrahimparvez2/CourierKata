@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using CourierSolution;
+using CourierSolution.Helpers;
 using CourierSolution.Interfaces;
 using CourierSolution.Models;
 using CourierSolution.Repository;
@@ -14,8 +15,7 @@ namespace CourierUnitTest
     {
         private Mock<OrderRepository> OrderRepository;
         
-        [SetUp]
-
+        [SetUp] 
         public void SetUp()
         {
             OrderRepository = new Mock<OrderRepository>();

@@ -8,17 +8,18 @@ namespace CourierSolution.Repository
     {
         public IList<IParcel> Parcels { get; set; }
         public IList<IParcel> Promo { get; set; }
-
-
-        public void AddParcelToOrder()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public double OrderTotal { get; set; }
         public bool IsSpeedyDelivery { get; set; }
         
-        
+        public OrderRepository()
+        {
+            Parcels = new List<IParcel>();    
+        }
+        public void AddParcelToOrder(IParcel parcel)
+        {
+            this.Parcels.Add(parcel);
+        }
+  
         public string PrintSummary()
         {
             string summary = "";
@@ -29,17 +30,6 @@ namespace CourierSolution.Repository
 
             return summary;
         }
-
-        public OrderRepository()
-        {
-            Parcels = new List<IParcel>();    
-        }
-
-        public void AddParcelToOrder(IParcel parcel)
-        {
-            this.Parcels.Add(parcel);
-        }
-
         public void GetOrderTotal()
         {
             foreach (var parcel in this.Parcels)
