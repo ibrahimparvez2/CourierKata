@@ -21,5 +21,16 @@ namespace CourierUnitTest
             
             Assert.AreEqual(parcel.GetType(),type);
         }
+        
+        
+        [TestCase(1,2,4, 3)]
+        [TestCase(1,2,8, 8)]
+        [TestCase(5,5,5,25)]
+        public void CheckFactoryReturnsCorrectCost(double length, double width, double height, double cost)
+        {
+            var parcel = ParcelFactoryHelper.CreateParcel(length, width, height);
+            
+            Assert.AreEqual(parcel.Cost,cost);
+        }
     }
 }

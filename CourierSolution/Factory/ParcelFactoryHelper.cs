@@ -12,20 +12,20 @@ namespace CourierSolution.Factory
 
             if (dimensions <= 10)
             {
-                return new SmallParcel();
+                return new SmallParcel(3.00);
             }
             else if (dimensions <= 50)
             {
-                return new MediumParcel();
+                return new MediumParcel(8.00);
             }
             else if ( dimensions <= 100)
             {
-                return new LargeParcel();
+                return new LargeParcel(15.00);
             }
             
             else if (dimensions >= 100)
             {
-                return new XLParcel();
+                return new XLParcel(25.00);
             }
 
             else

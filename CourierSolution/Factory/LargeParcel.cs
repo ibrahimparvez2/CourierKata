@@ -1,7 +1,9 @@
 namespace CourierSolution.Factory
 {
-    public class LargeParcel : IParcel
+    public class LargeParcel : BaseParcel
     {
-        public double Cost { get; set; }
+        public LargeParcel(double cost) : base(cost)
+        {
+        }
     }
 }

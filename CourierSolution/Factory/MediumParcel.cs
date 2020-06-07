@@ -1,6 +1,9 @@
 namespace CourierSolution.Factory
 {
-    public class MediumParcel : IParcel
+    public class MediumParcel : BaseParcel
     {
+        public MediumParcel(double cost) : base(cost)
+        {
+        }
     }
 }
