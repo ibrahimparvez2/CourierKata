@@ -35,7 +35,7 @@ namespace CourierUnitTest
 
             var promo = PromotionHelper.GetPromotions(OrderRepository.Object.Parcels);
             
-            Assert.AreEqual(promo.Count,2);
+            Assert.AreEqual(2,promo.Count);
 
         }
         
@@ -53,7 +53,7 @@ namespace CourierUnitTest
 
             var promo = PromotionHelper.GetPromotions(OrderRepository.Object.Parcels);
             
-            Assert.AreEqual(promo.Count,2);
+            Assert.AreEqual(2,promo.Count);
 
         }
 
